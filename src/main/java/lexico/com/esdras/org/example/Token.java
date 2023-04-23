@@ -6,6 +6,28 @@ public class Token {
     private int linha;
     private int coluna;
 
+    private int tamanhoToken;
+
+    public Valor getValor() {
+        return valor;
+    }
+
+    public int getLinha() {
+        return linha;
+    }
+
+    public int getColuna() {
+        return coluna;
+    }
+
+    public int getTamanhoToken() {
+        return tamanhoToken;
+    }
+
+    public void setTamanhoToken(int tamanhoToken) {
+        this.tamanhoToken = tamanhoToken;
+    }
+
     public Classe getClasse() {
         return classe;
     }
@@ -14,24 +36,12 @@ public class Token {
         this.classe = classe;
     }
 
-    public Valor getValor() {
-        return valor;
-    }
-
     public void setValor(Valor valor) {
         this.valor = valor;
     }
 
-    public int getLinha() {
-        return linha;
-    }
-
     public void setLinha(int linha) {
         this.linha = linha;
-    }
-
-    public int getColuna() {
-        return coluna;
     }
 
     public void setColuna(int coluna) {
@@ -47,4 +57,5 @@ public class Token {
                 ", coluna=" + coluna +
                 '}';
     }
+
 }

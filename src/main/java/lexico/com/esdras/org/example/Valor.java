@@ -5,27 +5,15 @@ public class Valor {
     private double valorDecimal;
     private String valorIdentificador;
 
-    public int getValorInteiro() {
-        return valorInteiro;
-    }
-
-    public void setValorInteiro(int valorInteiro) {
+    public Valor(int valorInteiro) {
         this.valorInteiro = valorInteiro;
     }
 
-    public double getValorDecimal() {
-        return valorDecimal;
-    }
-
-    public void setValorDecimal(double valorDecimal) {
+    public Valor(double valorDecimal) {
         this.valorDecimal = valorDecimal;
     }
 
-    public String getValorIdentificador() {
-        return valorIdentificador;
-    }
-
-    public void setValorIdentificador(String valorIdentificador) {
+    public Valor(String valorIdentificador) {
         this.valorIdentificador = valorIdentificador;
     }
 
