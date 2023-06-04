@@ -24,8 +24,10 @@ public class AnalisadorLexico {
             "function", "goto", "if", "in", "label", "mod",
             "nil", "not", "of", "or", "packed", "procedure",
             "program", "record", "repeat", "set", "then",
-            "to", "type", "until", "var", "while", "with"
+            "to", "type", "until", "var", "while", "with",
+            "read", "write", "real", "integer"
     ));
+
 
     public AnalisadorLexico(String nomeArquivo) {
         this.caminhoArquivo = Paths.get(nomeArquivo).toAbsolutePath().toString();
@@ -214,7 +216,7 @@ public class AnalisadorLexico {
     }
 
     boolean IsReservedWord(String word){
-        return this.reservedWords.contains(word);
+        return this.reservedWords.contains(word.toLowerCase());
     }
 }
 

@@ -16,18 +16,9 @@ public class App
 
         substituirTabulacao(nomeArquivo);
 
-        AnalisadorLexico analisadorLexico = new AnalisadorLexico(nomeArquivo);
+        AnalisadorSintatico analisadorSintatico = new AnalisadorSintatico(nomeArquivo);
 
-        Token token;
-        int linha = 1;
-        int coluna = 1;
-        do {
-            token = analisadorLexico.getToken(linha, coluna);
-            System.out.println(token);
-            coluna = token.getColuna()+token.getTamanhoToken();
-            linha = token.getLinha();
-        } while (token.getClasse() != Classe.cEOF);
-
+        analisadorSintatico.Analisar();
 
     }
 
